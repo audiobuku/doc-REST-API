@@ -491,7 +491,7 @@ Set custom field users response
 <a name="purchases"/>
 ## Get Data Audiobook Purchased
 
-Access this End Point with Header Authorization Bearer key
+Access this End Point with Header Authorization Bearer key  
 Set custom field purchases response
 ```json
 {
