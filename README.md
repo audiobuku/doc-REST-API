@@ -30,6 +30,7 @@ https://api.audiobuku.com
 | [`/api/v1/auth`](#login) | POST | Login user |
 | [`/api/v1/auth`](#refresh_token) | PUT | Refresh token user |
 | [`/api/v1/users/me`](#getUser) | GET | Show user profile |
+| [`/api/v1/purchases`](#purchases) | GET | Show Audiobook have purchased |
 
 <a name="collections1"/>
 ## Result collection  
@@ -485,4 +486,107 @@ Set custom field users response
     "created_at": "2019-04-01 10:10:01",
     "updated_at": "2019-06-18 15:51:26",
  }
+```
+
+<a name="purchases"/>
+## Get Data Audiobook Purchased
+
+Access this End Point with Header Authorization Bearer key
+Set custom field purchases response
+```json
+{
+    "current_page": 1,
+    "data": [
+        {
+            "id": 3055,
+            "title": "Toponim Kota Magelang",
+            "cover_picture_url": "https://storage.googleapis.com/audiobukucover/41c7c36d-ed9f-49a8-b22f-b5c35552f13d.png",
+            "created_at": "2019-03-20 12:09:55",
+            "updated_at": "2019-07-09 10:14:02",
+            "author": null,
+            "duration_seconds": 26902,
+            "narrator": null,
+            "authorslist": [
+                {
+                    "audiobook_id": 3055,
+                    "id": 72,
+                    "username": "Harto Juwono",
+                    "photo_url": null
+                },
+                {
+                    "audiobook_id": 3055,
+                    "id": 73,
+                    "username": "Heri Priyatmoko",
+                    "photo_url": null
+                },
+                {
+                    "audiobook_id": 3055,
+                    "id": 74,
+                    "username": "Agus Widiatmoko",
+                    "photo_url": null
+                }
+            ],
+            "narratorslist": [
+                {
+                    "audiobook_id": 3055,
+                    "id": 5,
+                    "username": "Teguh Iman Perdana",
+                    "photo_url": "https://storage.googleapis.com/audiobukucover/ac3db8ba-9801-4e47-ad73-37d1dc61857e.jpg"
+                }
+            ],
+            "audiobookchapter": [
+                {
+                    "audiobook_id": 3055,
+                    "id": 7490,
+                    "title": "01. Bagian I Magelang Dalam Lintasan Masa",
+                    "cover_picture_url": "https://storage.googleapis.com/audiobukucover/20be097c-b215-4586-ba9b-3e5aeeddf379.jpg",
+                    "audio_file_url": "3055top/78c930ac-2223-466c-911c-b2aed608f63a.mp3",
+                    "duration_seconds": 5459
+                },
+                {
+                    "audiobook_id": 3055,
+                    "id": 7491,
+                    "title": "02. Bagian II Toponim Kota Magelang",
+                    "cover_picture_url": "https://storage.googleapis.com/audiobukucover/20be097c-b215-4586-ba9b-3e5aeeddf379.jpg",
+                    "audio_file_url": "3055top/5b824200-685d-4fe2-9b02-ef5efb91650e.mp3",
+                    "duration_seconds": 5454
+                },
+                {
+                    "audiobook_id": 3055,
+                    "id": 7492,
+                    "title": "03. Kecamatan Magelang Tengah",
+                    "cover_picture_url": "https://storage.googleapis.com/audiobukucover/20be097c-b215-4586-ba9b-3e5aeeddf379.jpg",
+                    "audio_file_url": "3055top/cd0d9aa8-161b-4804-98e2-b3cbbc53d3df.mp3",
+                    "duration_seconds": 9271
+                },
+                {
+                    "audiobook_id": 3055,
+                    "id": 7493,
+                    "title": "04. Kecamatan Magelang Selatan",
+                    "cover_picture_url": "https://storage.googleapis.com/audiobukucover/20be097c-b215-4586-ba9b-3e5aeeddf379.jpg",
+                    "audio_file_url": "3055top/eedf20b6-ed38-4d0e-98f2-42ac5938baac.mp3",
+                    "duration_seconds": 6266
+                },
+                {
+                    "audiobook_id": 3055,
+                    "id": 7494,
+                    "title": "05. Bagian III Penutup",
+                    "cover_picture_url": "https://storage.googleapis.com/audiobukucover/20be097c-b215-4586-ba9b-3e5aeeddf379.jpg",
+                    "audio_file_url": "3055top/4ebd2c71-de36-420c-aae1-a7ddce741a54.mp3",
+                    "duration_seconds": 452
+                }
+            ]
+        }
+    ],
+    "first_page_url": "https://api.audiobuku.com/api/v1/purchases?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://api.audiobuku.com/api/v1/purchases?page=1",
+    "next_page_url": null,
+    "path": "https://api.audiobuku.com/api/v1/purchases",
+    "per_page": 12,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 10
+}
 ```
