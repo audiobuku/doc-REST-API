@@ -26,6 +26,10 @@ https://api.audiobuku.com
 | [`/api/v1/audiobooks/{id}`](#audiobook) | GET | Show all data audiobook filter by id audiobook |
 | [`/api/v1/categories`](#category) | GET | Show data category audiobook |
 | [`/api/v1/categories/{id}`](#category) | GET | Show data subcategory audiobook |
+| [`/api/v1/users`](#register) | POST | Register user |
+| [`/api/v1/auth`](#login) | POST | Login user |
+| [`/api/v1/auth`](#refresh_token) | PUT | Refresh token user |
+| [`/api/v1/users/me`](#getUser) | GET | Show user profile |
 
 <a name="collections1"/>
 ## Result collection  
@@ -388,4 +392,97 @@ https://api.audiobuku.com
         }
     ]
 }
+```
+
+<a name="register"/>
+## Register  
+
+Set custom field register request
+```json
+{
+	"email":"Rohanisuhadi@gmail.com",
+	"name":"Rohani Suhadi",
+	"password":"*()Buku96"
+}
+```
+
+Set custom field register response
+```json
+{
+    "id:"909090
+	"email":"Rohanisuhadi@gmail.com",
+	"name":"Rohani Suhadi"
+}
+```
+
+<a name="login"/>
+## Login  
+
+Set custom field login request
+```json
+{
+	"email":"Rohanisuhadi@gmail.com",
+	"password":"*()Buku96"
+}
+```
+
+Set custom field login response
+```json
+{
+    "id:"909090,
+    "access_token": "key",
+    "refresh_token": "key",
+    "token_type": "Bearer",
+    "expires_in": 2678400,
+	"email":"Rohanisuhadi@gmail.com",
+	"name":"Rohani Suhadi"
+}
+```
+
+<a name="refresh_token"/>
+
+## Refresh token
+Access End Point Refresh token with Header Authorization Bearer key
+
+Set custom field login request
+```json
+{
+	"refresh_token":"key_refresh_token"
+}
+```
+
+Set custom field login response
+```json
+{
+    "access_token": "key",
+    "refresh_token": "key",
+    "token_type": "Bearer",
+    "expires_in": 2678400,
+}
+```
+
+<a name="getUser"/>
+## Get Data My User Profile
+
+Access this End Point with Header Authorization Bearer key
+Set custom field users response
+```json
+{
+    "id": 4545454,
+    "email": "rohanisuhadi@gmail.com",
+    "username": null,
+    "name": "Rohani Suhadi",
+    "first_name": null,
+    "last_name": null,
+    "photo_url": "305e5dc6-49cc-4ce1-b530-c2a3d1a3fed7.jpg",
+    "birth_date_at": "1997-03-31 00:00:00",
+    "phone_number": "085700340869",
+    "gender": "male",
+    "about": null,
+    "website": null,
+    "relationship_status": null,
+    "device": null,
+    "created_at": "2019-04-01 10:10:01",
+    "updated_at": "2019-06-18 15:51:26",
+ }
 ```
