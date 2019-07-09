@@ -409,9 +409,9 @@ Set custom field register request
 Set custom field register response
 ```json
 {
-    "id:"909090
-	"email":"Rohanisuhadi@gmail.com",
-	"name":"Rohani Suhadi"
+    "id":909090,
+    "email":"Rohanisuhadi@gmail.com",
+    "name":"Rohani Suhadi"
 }
 ```
 
@@ -429,13 +429,13 @@ Set custom field login request
 Set custom field login response
 ```json
 {
-    "id:909090,
+    "id":909090,
     "access_token": "key",
     "refresh_token": "key",
     "token_type": "Bearer",
     "expires_in": 2678400,
-	"email":"Rohanisuhadi@gmail.com",
-	"name":"Rohani Suhadi"
+    "email":"Rohanisuhadi@gmail.com",
+    "name":"Rohani Suhadi"
 }
 ```
 
