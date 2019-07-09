@@ -429,7 +429,7 @@ Set custom field login request
 Set custom field login response
 ```json
 {
-    "id:"909090,
+    "id:909090,
     "access_token": "key",
     "refresh_token": "key",
     "token_type": "Bearer",
